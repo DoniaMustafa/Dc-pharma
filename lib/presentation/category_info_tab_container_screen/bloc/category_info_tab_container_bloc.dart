@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/userprofile2_item_model.dart';import 'package:drfarama/presentation/category_info_tab_container_screen/models/category_info_tab_container_model.dart';part 'category_info_tab_container_event.dart';part 'category_info_tab_container_state.dart';/// A bloc that manages the state of a CategoryInfoTabContainer according to the event that is dispatched to it.
+class CategoryInfoTabContainerBloc extends Bloc<CategoryInfoTabContainerEvent, CategoryInfoTabContainerState> {CategoryInfoTabContainerBloc(CategoryInfoTabContainerState initialState) : super(initialState) { on<CategoryInfoTabContainerInitialEvent>(_onInitialize); }
+
+List<Userprofile2ItemModel> fillUserprofile2ItemList() { return [Userprofile2ItemModel(gradient: ImageConstant.imgGradient200x338, seeAll: "see all", rectangleImage: ImageConstant.imgRectangle18654, flashSaleText: "50% flash sale")]; } 
+_onInitialize(CategoryInfoTabContainerInitialEvent event, Emitter<CategoryInfoTabContainerState> emit, ) async  { emit(state.copyWith(sliderIndex: 0)); emit(state.copyWith(categoryInfoTabContainerModelObj: state.categoryInfoTabContainerModelObj?.copyWith(userprofile2ItemList: fillUserprofile2ItemList()))); } 
+ }

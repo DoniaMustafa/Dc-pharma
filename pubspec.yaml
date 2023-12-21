@@ -1,0 +1,84 @@
+name: drfarama
+description: A new Flutter project.
+version: 1.0.0+1
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_bloc: ^8.0.0
+  connectivity_plus: ^2.3.6
+  shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.1
+  flutter_svg: ^1.1.6
+  equatable: ^2.0.0
+  country_pickers: ^2.0.0
+  flutter_svg_provider: ^1.0.3
+  smooth_page_indicator: ^1.0.0+2
+  carousel_slider: ^4.0.0
+  dotted_border: 2.0.0+3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+  fonts:
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/OutfitBold.ttf
+          weight: 700
+        - asset: assets/fonts/OutfitRegular.ttf
+          weight: 400
+        - asset: assets/fonts/OutfitSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OutfitLight.ttf
+          weight: 300
+        - asset: assets/fonts/OutfitMedium.ttf
+          weight: 500
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/PoppinsBold.ttf
+          weight: 700
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+        - asset: assets/fonts/PoppinsSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+    - family: Almarai
+      fonts:
+        - asset: assets/fonts/AlmaraiRegular.ttf
+          weight: 400
+        - asset: assets/fonts/AlmaraiBold.ttf
+          weight: 700
+    - family: JF Flat
+      fonts:
+        - asset: assets/fonts/JFFlatRegular.ttf
+          weight: 400
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/UrbanistBold.ttf
+          weight: 700
+        - asset: assets/fonts/UrbanistRegular.ttf
+          weight: 400
+        - asset: assets/fonts/UrbanistRomanRegular.ttf
+          weight: 400
+        - asset: assets/fonts/UrbanistRomanBold.ttf
+          weight: 700
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/NunitoBold.ttf
+          weight: 700
+    - family: DM Sans
+      fonts:
+        - asset: assets/fonts/DMSansBold.ttf
+          weight: 700
+        - asset: assets/fonts/DMSansRegular.ttf
+          weight: 400
+        - asset: assets/fonts/DMSansMedium.ttf
+          weight: 500

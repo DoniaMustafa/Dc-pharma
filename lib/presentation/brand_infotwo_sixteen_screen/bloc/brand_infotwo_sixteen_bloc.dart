@@ -1,0 +1,7 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:drfarama/presentation/brand_infotwo_sixteen_screen/models/brand_infotwo_sixteen_model.dart';part 'brand_infotwo_sixteen_event.dart';part 'brand_infotwo_sixteen_state.dart';/// A bloc that manages the state of a BrandInfotwoSixteen according to the event that is dispatched to it.
+class BrandInfotwoSixteenBloc extends Bloc<BrandInfotwoSixteenEvent, BrandInfotwoSixteenState> {BrandInfotwoSixteenBloc(BrandInfotwoSixteenState initialState) : super(initialState) { on<BrandInfotwoSixteenInitialEvent>(_onInitialize); on<ChangeDropDownEvent>(_changeDropDown); }
+
+_changeDropDown(ChangeDropDownEvent event, Emitter<BrandInfotwoSixteenState> emit, ) { emit(state.copyWith(selectedDropDownValue: event.value)); } 
+List<SelectionPopupModel> fillDropdownItemList() { return [SelectionPopupModel(id: 1, title: "Item One", isSelected: true), SelectionPopupModel(id: 2, title: "Item Two"), SelectionPopupModel(id: 3, title: "Item Three")]; } 
+_onInitialize(BrandInfotwoSixteenInitialEvent event, Emitter<BrandInfotwoSixteenState> emit, ) async  { emit(state.copyWith(firstNameController: TextEditingController(), productDescriptionController: TextEditingController(), expiryDateController: TextEditingController(), priceController: TextEditingController(), quantityController: TextEditingController())); emit(state.copyWith(brandInfotwoSixteenModelObj: state.brandInfotwoSixteenModelObj?.copyWith(dropdownItemList: fillDropdownItemList()))); } 
+ }
